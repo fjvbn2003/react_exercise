@@ -10,6 +10,9 @@ class App extends Component {
       {name:"Park", age:"24", belt:"red", id:3}
     ]
   }
+  addNinja = (ninja) =>{
+    console.log(ninja);
+  }
 
   render() {
     return (
@@ -17,7 +20,7 @@ class App extends Component {
         <h1>My first React App</h1>
         <p>Welcome :)</p>
         <Ninjas ninjas={this.state.ninjas}/>
-        <AddNinja/>
+        <AddNinja addNinja={this.addNinja}/>
       </div>
     );
   }
