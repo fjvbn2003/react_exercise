@@ -18,7 +18,12 @@ class App extends Component {
     })
   }
   deleteNinja= (id) =>{
-    console.log("you clicked the deleteNinja function ", id)
+    let ninjas = this.state.ninjas.filter(ninja =>{
+      return ninja.id !== id
+    });
+    this.setState({
+      ninjas: ninjas
+    })
   }
   render() {
     return (
