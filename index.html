@@ -11,8 +11,6 @@
 <body>
     <div id='app'>
 
-        
-        
     </div>
     <script type="text/babel">
         class App extends React.Component{
@@ -20,32 +18,20 @@
                 name: 'KIM',
                 age: 25
             }
-            // this isn't working, need to binding
-            // handleClick(e){
-            //     //console.log(e.target);
-            //     console.log(this.state.name); // this isn't working, need to binding
-            // }
-            handleClick = (e) =>{
-                 //console.log(e.target);
-                 this.setState({name: 'MIN'});
-                 console.log(this.state.name); // this is working.
-            }
-            handleMouseOver(e){
-                console.log(e);
-            }
-            handleCopy(e){
-                console.log('try being original for once!')
+            handleChange = (e) => {
+                this.setState({
+                    name: e.target.value
+                })
             }
             render(){
                 return (
                     <div className="app-content">
-                        <h1>Hey, youngjuice!</h1>
-                        <p>My name is: {this.state.name} and I am {this.state.age}</p>
-                        <button onClick={this.handleClick}>Click Me</button>
-                        <button onMouseOver={this.handleMouseOver}>Hover me</button>
-                        <p onCopy={this.handleCopy}>What we think, we become</p>
-                    </div>
-
+                        <h1>My name is: {this.state.name}</h1>
+                        <form>
+                            <input type="text" onChange={this.handleChange}/>
+                            <button>submit</button>
+                        </form>
+                    </div>  
                 )
             }
         }
