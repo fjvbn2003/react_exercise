@@ -20,9 +20,15 @@
                 name: 'KIM',
                 age: 25
             }
-            handleClick(e){
-                //console.log(e.target);
-                conlsole.log(e);
+            // this isn't working, need to binding
+            // handleClick(e){
+            //     //console.log(e.target);
+            //     console.log(this.state.name); // this isn't working, need to binding
+            // }
+            handleClick = (e) =>{
+                 //console.log(e.target);
+                 this.setState({name: 'MIN'});
+                 console.log(this.state.name); // this is working.
             }
             handleMouseOver(e){
                 console.log(e);
