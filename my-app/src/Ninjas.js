@@ -3,11 +3,13 @@ import App from './App';
 
 class Ninjas extends Component{
     render(){
+        //console.log(this.props);
+        const {name, age, belt} = this.props;
         return(
             <div className="ninja">
-                <div>Name: KIM</div>
-                <div>Age: 25</div>
-                <div>Belt: Black</div>
+                <div>Name: {name}</div>
+                <div>Age: {age}</div>
+                <div>Belt:{belt}</div>
             </div>
         )
 
